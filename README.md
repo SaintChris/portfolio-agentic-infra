@@ -7,7 +7,7 @@
 ## Quick Start
 ```bash
 # Clone the repo
-git clone https://github.com/saint/portfolio-agentic-infra.git
+git clone https://github.com/SaintChris/portfolio-agentic-infra.git
 cd portfolio-agentic-infra
 # Start services (Docker required)
 docker-compose up -d
