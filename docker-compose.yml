@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  qdrant:
+    image: qdrant/qdrant
+    container_name: qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  postgres:
+    image: postgres:16
+    container_name: paperclip_postgres
+    restart: unless-stopped
+    ports:
+      - "54329:5432"
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-paperclip}
+      POSTGRES_USER: paperclip
+      POSTGRES_DB: paperclip
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "paperclip"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  paperclip:
+    image: paperclipai/paperclip:latest
+    container_name: paperclip
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "3100:3100"
+    environment:
+      - DATABASE_URL=postgresql://paperclip:${POSTGRES_PASSWORD}@postgres:5432/paperclip
+      - QDRANT_API_KEY=${QDRANT_API_KEY}
+      - FIRECRAWL_API_KEY=${FIRECRAWL_API_KEY}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3100/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  dashboard:
+    build:
+      context: ./dashboard
+    container_name: dashboard
+    restart: unless-stopped
+    depends_on:
+      paperclip:
+        condition: service_healthy
+    ports:
+      - "9120:9120"
+    environment:
+      - PAPERCLIP_API_KEY=${PAPERCLIP_API_KEY}
+      - COMPANY_ID=${COMPANY_ID}
+    networks:
+      - agentic-net
+
+networks:
+  agentic-net:
+    driver: bridge
+
+volumes:
+  qdrant_storage:
+  ollama_models:
+  postgres_data:

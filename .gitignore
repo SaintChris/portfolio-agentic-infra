@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+#Hermes config (contains API keys)
+hermes/config.yaml
+hermes/.env
+
+# Qdrant local storage
+hermes/qdrant_storage/
+
+# Node
+node_modules/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log

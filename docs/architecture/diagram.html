@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Agentic Architecture Diagram</title>
+  <style>
+    body { background:#0f1117; color:#e0e0e0; font-family:Arial, sans-serif; }
+    .diagram { max-width:100%; margin:auto; }
+  </style>
+</head>
+<body>
+<div class="diagram">
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0f1117"/>
+  <!-- Services -->
+  <g font-family="Arial" font-size="14" fill="#e0e0e0" text-anchor="middle">
+    <rect x="50" y="50" width="150" height="60" rx="8" fill="#2d2f3a"/>
+    <text x="125" y="80">Dashboard (9120)</text>
+
+    <rect x="300" y="50" width="150" height="60" rx="8" fill="#2d2f3a"/>
+    <text x="375" y="80">Paperclip API (3100)</text>
+
+    <rect x="550" y="50" width="150" height="60" rx="8" fill="#2d2f3a"/>
+    <text x="625" y="80">Ollama (11434)</text>
+
+    <rect x="300" y="200" width="150" height="60" rx="8" fill="#2d2f3a"/>
+    <text x="375" y="230">Postgres (54329)</text>
+
+    <rect x="550" y="200" width="150" height="60" rx="8" fill="#2d2f3a"/>
+    <text x="625" y="230">Qdrant (6333)</text>
+  </g>
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6c5ce7"/>
+    </marker>
+  </defs>
+  <g stroke="#6c5ce7" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <!-- Dashboard -> Paperclip -->
+    <line x1="200" y1="80" x2="300" y2="80"/>
+    <!-- Paperclip -> Ollama -->
+    <line x1="450" y1="80" x2="550" y2="80"/>
+    <!-- Paperclip -> Postgres -->
+    <line x1="375" y1="110" x2="375" y2="200"/>
+    <!-- Paperclip -> Qdrant -->
+    <line x1="425" y1="110" x2="625" y2="200"/>
+  </g>
+</svg>
+</div>
+</body>
+</html>
