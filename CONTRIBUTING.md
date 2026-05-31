@@ -1,56 +1,42 @@
-# Contributing to Agentic Infrastructure Portfolio
+# Contributing to Portfolio Agentic Infrastructure
 
-## Adding a New Example Agent
+Thank you for considering a contribution! This project follows a simple open-source workflow.
 
-1. Create a new directory under `examples/`:
+## How to Contribute
+1. **Fork the repository** on GitHub.
+2. **Clone your fork** locally:
+   ```bash
+   git clone https://github.com/yourusername/portfolio-agentic-infra.git
+   cd portfolio-agentic-infra
    ```
-   examples/your-agent-name/
-   ├── README.md           # What it does, workflow diagram, tools
-   ├── workflow.py         # Runnable demo (stdlib only)
-   └── templates/          # Prompt templates, output formats
+3. **Create a new branch** for your feature or bug fix:
+   ```bash
+   git checkout -b my-feature
    ```
-
-2. Requirements for `workflow.py`:
-   - Python 3.9+ stdlib only (no pip installs)
-   - Dataclasses for core models
-   - A main pipeline function (e.g., `process_request()`)
-   - Clear console output showing each step
-   - Must pass: `python3 workflow.py` with exit code 0
-
-3. Add tests in `tests/test_your_agent.py`:
-   - Import the workflow module
-   - Test core classification/matching logic
-   - Test edge cases
-   - Must pass: `python3 tests/test_your_agent.py`
-
-4. Update `README.md`:
-   - Add the agent to the example projects list
-   - Keep the "Built With" section current
+4. **Make changes**. Ensure code follows the existing style (PEP8 for Python, standard Markdown for docs).
+5. **Run tests** (if applicable):
+   ```bash
+   pytest
+   ```
+6. **Commit your changes** with a clear message:
+   ```bash
+   git commit -m "Add XYZ feature"
+   ```
+7. **Push to your fork** and open a Pull Request against `main`.
 
 ## Code Style
+- Python: use `black` and `flake8`.
+- Markdown: keep lines under 120 characters.
+- Use semantic commit messages (feat:, fix:, docs:, etc.).
 
-- **Python**: dataclasses for models, type hints, docstrings
-- **Markdown**: headers for structure, tables for reference data, ASCII diagrams for workflows
-- **Commit messages**: imperative mood, specific (`Add finance ops agent` not `Updates`)
-- **No secrets ever**: API keys go in `.env`, never in code
+## Review Process
+- PRs will be reviewed by a project maintainer.
+- Automated CI runs tests and linting.
+- Once approved, it will be merged.
 
-## Running Tests
+## Reporting Issues
+- Use the GitHub Issues tracker.
+- Provide a clear title, steps to reproduce, and expected vs actual behavior.
 
-```bash
-cd tests
-bash run_all.sh       # Run all tests
-python3 test_intake_agent.py   # Run single test
-```
-
-## Dashboard Development
-
-```bash
-python3 dashboard/app.py --demo   # Demo mode (mock data)
-python3 dashboard/app.py          # Live mode (connects to Paperclip)
-```
-
-Access at `http://127.0.0.1:9120`
-
-## Questions?
-
-Open an issue or reach out to Alex directly.
+## Thanks
+Your contributions help us build better autonomous AI systems!

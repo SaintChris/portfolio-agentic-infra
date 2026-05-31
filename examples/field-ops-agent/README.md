@@ -1,43 +1,38 @@
-# Field Operations Assistant Example — Portfolio Project
+# Field Operations Assistant Example
 
-**Goal**: Turn messy field technician notes (and optional photo references) into a structured job record, generate follow‑up tasks, and draft a customer update email.
+## Overview
+A field technician submits unstructured job notes (and optionally photos). The assistant parses the notes, creates a structured job record, generates follow‑up tasks, and drafts a customer update.
 
-## Workflow
+## Workflow Diagram
 ```
-Unstructured Notes
-      │
-      ▼
-┌─────────────────────┐
-│ 1. PARSE NOTES      │ Extract key fields: location, issue, parts, time, sentiment
-└─────────┬───────────┘
-          │
-          ▼
-┌─────────────────────┐
-│ 2. BUILD RECORD     │ `JobReport` JSON ready for DB insert
-└───────┬─────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ 3. CREATE TASKS    │ Identify needed follow‑ups (order parts, schedule return, etc.)
-└───────┬─────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│ 4. DRAFT EMAIL     │ Customer update based on job outcome
-└─────────────────────┘
+[Technician] --> Submit notes/photos --> [FieldOps Agent]
+    |
+    | parses
+    v
+[Parsed Data] --> Create JobRecord (JSON) --> Store in DB
+    |
+    | generate
+    v
+[Follow‑Up Tasks] --> Queue for execution (order parts, schedule visit, etc.)
+    |
+    | draft
+    v
+[Customer Email] --> Send to client
 ```
 
-## Files
-- `README.md` – this overview and diagram
-- `workflow.py` – runnable demo script (stdlib only)
-- `templates/job-report-template.md` – markdown template for the structured report
-- `templates/customer-update.md` – markdown template for the email draft
+## Features
+- **Dataclasses** for `JobReport`, `FollowUpTask`, `FieldNote`
+- **Robust parsing** tolerant of noisy free‑text
+- **Template‑based** generation of a markdown job report and customer email
+- **CLI runnable**: `python3 workflow.py` prints the full pipeline output
+
+## Getting Started
+```sh
+cd /Users/saint/github/portfolio-agentic-infra/examples/field-ops-agent
+python3 workflow.py
+```
 
 ## Acceptance Criteria
-- All four files exist in `examples/field-ops-agent/`
-- `python3 workflow.py` runs clean and prints demo output for 3 sample notes
-- Script demonstrates parsing, structuring, task generation, and email drafting
-- README includes the ASCII workflow diagram above
-
-## Output Location
-`/Users/saint/github/portfolio-agentic-infra/examples/field-ops-agent/`
+- All required files present
+- Script runs without errors on the provided sample notes
+- Demonstrates parsing, structuring, task generation, and customer communication

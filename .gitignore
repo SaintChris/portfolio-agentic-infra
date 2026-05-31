@@ -1,47 +1,28 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-env/
+*~
+*.egg-info/
+*.dist-info/
+
+# Virtual environment
 venv/
+.env
 .venv/
 
-# Environment
-.env
-.env.local
-.env.*.local
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
+# OS files
 .DS_Store
 Thumbs.db
 
-#Hermes config (contains API keys)
-hermes/config.yaml
-hermes/.env
-
-# Qdrant local storage
-hermes/qdrant_storage/
-
-# Node
-node_modules/
-
-# Build
-dist/
-build/
-*.egg-info/
-
 # Logs
 *.log
-examples/intake_agent
-examples/finance_ops_agent
-examples/executive_reporting_agent
-examples/field_ops_agent
-examples/knowledge_agent
+
+# Env files
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Misc
+*.sqlite3
+*.db
