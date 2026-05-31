@@ -26,3 +26,9 @@ Thumbs.db
 # Misc
 *.sqlite3
 *.db
+# Python import symlinks (local dev only)
+examples/intake_agent
+examples/finance_ops_agent
+examples/executive_reporting_agent
+examples/field_ops_agent
+examples/knowledge_agent
