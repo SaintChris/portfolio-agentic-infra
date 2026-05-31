@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "id": "REV-3925b000",
+      "agent": "intake_agent",
+      "content_type": "email_draft",
+      "content": "Dear customer, we're sorry to hear about the issue...",
+      "priority": "high",
+      "status": "approved",
+      "assigned_to": null,
+      "created_at": "2026-05-30T22:30:44.777925",
+      "reviewed_at": "2026-05-30T22:30:44.778533",
+      "reviewer_notes": "Looks good, ship it",
+      "sla_hours": 4
+    },
+    {
+      "id": "REV-bd694196",
+      "agent": "finance_agent",
+      "content_type": "approval_packet",
+      "content": "PKT-001: 3 invoices flagged, $2,450 total",
+      "priority": "medium",
+      "status": "pending",
+      "assigned_to": null,
+      "created_at": "2026-05-30T22:30:44.778146",
+      "reviewed_at": null,
+      "reviewer_notes": null,
+      "sla_hours": 24
+    },
+    {
+      "id": "REV-d8fc8922",
+      "agent": "content_agent",
+      "content_type": "linkedin_post",
+      "content": "I built 5 AI agents that actually work...",
+      "priority": "low",
+      "status": "pending",
+      "assigned_to": null,
+      "created_at": "2026-05-30T22:30:44.778299",
+      "reviewed_at": null,
+      "reviewer_notes": null,
+      "sla_hours": 48
+    }
+  ]
+}
