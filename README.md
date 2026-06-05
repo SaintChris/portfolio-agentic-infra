@@ -1,21 +1,27 @@
-# Multi-Agent AI System — Portfolio
+# 🤖 Multi-Agent AI System
 
-> **6 autonomous AI agents working in concert. All running on free-tier models at $0/month.**
-> Built as a production-grade portfolio piece for Applied AI Engineer roles.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-saintlex.sbs-blue)](https://saintlex.sbs/)
+[![Tests](https://img.shields.io/badge/Tests%20Passing-52-success)](https://github.com/SaintChris/portfolio-agentic-infra)
+[![Cost](https://img.shields.io/badge/Cost-%240%2Fmonth-success)](https://github.com/SaintChris/portfolio-agentic-infra)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-teal?logo=fastapi)](https://fastapi.tiangolo.com)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)](https://docker.com)
-[![Tests](https://img.shields.io/badge/Tests-52%20Passing-green)](./tests)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+> 6 autonomous AI agents working in concert. Production delegation patterns. All running on free-tier models at **$0/month.**
+
+---
 
 ## What This Is
 
-A complete multi-agent AI system that automates a full business workflow. Six specialized agents — CEO, Market Analyst, Content Growth, Finance, Ops, and Research — coordinate through a shared task queue with production delegation patterns.
+A complete **multi-agent AI system** that automates a full business workflow using six specialized agents coordinating through a shared task queue.
 
-**Key point:** Every component uses free-tier AI models and open-source tooling. Zero model cost. This is not a demo — it's a production architecture.
+**Key Highlights:**
+- ✅ **Zero model cost** — All free-tier AI models and open-source tooling
+- ✅ **Production-grade architecture** — Real delegation, testing, monitoring
+- ✅ **Built for portfolio** — Targets Applied AI Engineer roles
+- ✅ **Live dashboard** — Real-time monitoring via Streamlit
 
-## Quick Start
+---
+
+## 🚀 Quick Start
 
 ```bash
 git clone https://github.com/SaintChris/portfolio-agentic-infra.git
@@ -31,9 +37,11 @@ python3 dashboard/app.py
 python3 dashboard/app.py --demo
 ```
 
-Open `http://localhost:8501` for the live dashboard.
+👉 Open `http://localhost:8501` for the live dashboard.
 
-## Architecture
+---
+
+## 🏗️ Architecture
 
 ```
 ┌─────────────┐     ┌──────────────────┐     ┌─────────────┐
@@ -49,7 +57,9 @@ Open `http://localhost:8501` for the live dashboard.
      └──────────────┘  └──────────────┘  └──────────────┘
 ```
 
-## Agents
+---
+
+## 🤖 Agents
 
 | Agent | Role | Key Capability |
 |-------|------|----------------|
@@ -60,16 +70,34 @@ Open `http://localhost:8501` for the live dashboard.
 | **Ops** | Infrastructure | Deployment, health checks, system monitoring |
 | **Research** | Intelligence | External data gathering, specialized analysis |
 
-## Features
+---
+
+## ✨ Features
 
 - **Agent Delegation Bridge** — Seamless handoff between agents via shared task queue
 - **Live Dashboard** — Real-time Streamlit UI showing agent status, task queue, system health
-- **Zero Cost** — All free-tier models, open-source tooling, $0/month
+- **Zero Cost** — All free-tier models, open-source tooling, **$0/month**
 - **Demo Mode** — Run with mock data for instant demos (no backend dependencies)
 - **52 Integration Tests** — Full test suite with rubric-based eval framework
 - **Docker Ready** — One-command deployment with docker-compose
 
-## Tech Stack
+---
+
+## 🧪 Testing
+
+```bash
+# Run all integration tests
+python3 -m pytest tests/ -v
+
+# Run eval framework
+python3 tests/evals.py
+```
+
+✅ **52 assertions, all passing.**
+
+---
+
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -82,19 +110,9 @@ Open `http://localhost:8501` for the live dashboard.
 | Storage | PostgreSQL |
 | Deployment | Docker |
 
-## Testing
+---
 
-```bash
-# Run all integration tests
-python3 -m pytest tests/ -v
-
-# Run eval framework
-python3 tests/evals.py
-```
-
-**Results:** 52 assertions, all passing. Rubric-based scoring with human-in-the-loop review queue.
-
-## Repository Structure
+## 📁 Repository Structure
 
 ```
 portfolio-agentic-infra/
@@ -103,26 +121,40 @@ portfolio-agentic-infra/
 ├── examples/           # 5 production-grade agent implementations
 ├── scripts/            # Utility and setup scripts
 ├── tests/              # Integration tests + eval framework
-├── docker-compose.yml  # Full stack: Qdrant, Ollama, Postgres, Paperclip
+├── docker-compose.yml  # Full stack deployment
 ├── requirements.txt
 ├── .env.example
 ├── CONTRIBUTING.md
 └── LICENSE (MIT)
 ```
 
-## Why This Exists
+---
 
-Built to demonstrate production-grade AI agent engineering skills:
+## 💡 Why This Exists
 
-1. **Multi-agent orchestration** — Not just prompts, but real delegation patterns
+Built to demonstrate **production-grade AI agent engineering skills:**
+
+1. **Multi-agent orchestration** — Real delegation patterns, not just prompts
 2. **Production architecture** — Tests, monitoring, containerization, documentation
 3. **Cost engineering** — Designed from day one to run at zero model cost
 4. **Real-world patterns** — Task queues, health checks, eval frameworks, human-in-the-loop
 
-## License
+---
+
+## 📄 License
 
 MIT — Free to adapt and reuse.
 
 ---
 
-**Author:** [Alex Bogle](https://saintlex.sbs) · [LinkedIn](https://linkedin.com/in/alex-bogle) · [GitHub](https://github.com/SaintChris)
+## 👤 Author
+
+**Alex Bogle** — AI Engineer based in Jamaica. Building production-grade AI agent infrastructure. 🔭 Open to Work — seeking Applied AI Engineer, ML Engineer, AI Solutions Engineer roles.
+
+- 🌐 [saintlex.sbs](https://saintlex.sbs/)
+- 💼 [linkedin.com/in/alex-bogle](https://linkedin.com/in/alex-bogle)
+- 📧 [alex@alexbogle.com](mailto:alex@alexbogle.com)
+
+---
+
+> ⭐ If this project is useful or interesting, a star is appreciated — it helps others discover this work.
