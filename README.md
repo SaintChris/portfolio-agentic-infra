@@ -3,7 +3,7 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-saintlex.sbs-blue)](https://saintlex.sbs/)
 [![Tests](https://img.shields.io/badge/Tests%20Passing-52-success)](https://github.com/SaintChris/portfolio-agentic-infra)
 [![Cost](https://img.shields.io/badge/Cost-%240%2Fmonth-success)](https://github.com/SaintChris/portfolio-agentic-infra)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE) [![Readers](https://img.shields.io/badge/Readers-0-blue)](https://github.com/SaintChris/portfolio-agentic-infra)
 
 > 6 autonomous AI agents working in concert. Production delegation patterns. All running on free-tier models at **$0/month.**
 
