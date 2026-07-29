@@ -1,22 +1,22 @@
 # 🤖 Multi-Agent AI System
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-saintlex.sbs-blue)](https://saintlex.sbs/)
-[![Tests](https://img.shields.io/badge/Tests%20Passing-52-success)](https://github.com/SaintChris/portfolio-agentic-infra)
-[![Cost](https://img.shields.io/badge/Cost-%240%2Fmonth-success)](https://github.com/SaintChris/portfolio-agentic-infra)
+[![CI](https://github.com/SaintChris/portfolio-agentic-infra/actions/workflows/ci.yml/badge.svg)](https://github.com/SaintChris/portfolio-agentic-infra/actions)
+
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE) [![Readers](https://img.shields.io/badge/Readers-0-blue)](https://github.com/SaintChris/portfolio-agentic-infra)
 
-> 6 autonomous AI agents working in concert. Production delegation patterns. All running on free-tier models at **$0/month.**
+> Portfolio lab exploring six agent roles, a shared task queue, and a Streamlit dashboard. This is a learning project, not a production deployment.
 
 ---
 
 ## What This Is
 
-A complete **multi-agent AI system** that automates a full business workflow using six specialized agents coordinating through a shared task queue.
+A portfolio experiment that models six specialized agent roles coordinating through a shared task queue.
 
 **Key Highlights:**
-- ✅ **Zero model cost** — All free-tier AI models and open-source tooling
-- ✅ **Production-grade architecture** — Real delegation, testing, monitoring
-- ✅ **Built for portfolio** — Targets Applied AI Engineer roles
+- **Local-first experiment** — Designed around local and free-tier tooling; actual operating cost depends on the selected providers and environment
+- **Architecture experiment** — Delegation, tests, and monitoring concepts
+- **Built for learning and demonstration** — Not enterprise production experience
 - ✅ **Live dashboard** — Real-time monitoring via Streamlit
 
 ---
@@ -76,9 +76,9 @@ python3 dashboard/app.py --demo
 
 - **Agent Delegation Bridge** — Seamless handoff between agents via shared task queue
 - **Live Dashboard** — Real-time Streamlit UI showing agent status, task queue, system health
-- **Zero Cost** — All free-tier models, open-source tooling, **$0/month**
+- **Cost-conscious design** — Supports local and free-tier components; no universal monthly-cost claim is made
 - **Demo Mode** — Run with mock data for instant demos (no backend dependencies)
-- **52 Integration Tests** — Full test suite with rubric-based eval framework
+- **Test suite included** — Current public CI is failing and must be repaired before any passing-test claim is made
 - **Docker Ready** — One-command deployment with docker-compose
 
 ---
@@ -93,7 +93,7 @@ python3 -m pytest tests/ -v
 python3 tests/evals.py
 ```
 
-✅ **52 assertions, all passing.**
+The repository includes tests, but the current public GitHub Actions runs are failing. Run the suite in a clean environment and record the actual result before citing a passing count.
 
 ---
 
@@ -118,7 +118,7 @@ python3 tests/evals.py
 portfolio-agentic-infra/
 ├── dashboard/          # Streamlit UI — live monitoring + demo mode
 ├── docs/               # Architecture docs and diagrams
-├── examples/           # 5 production-grade agent implementations
+├── examples/           # Example agent workflow implementations
 ├── scripts/            # Utility and setup scripts
 ├── tests/              # Integration tests + eval framework
 ├── docker-compose.yml  # Full stack deployment
@@ -132,11 +132,11 @@ portfolio-agentic-infra/
 
 ## 💡 Why This Exists
 
-Built to demonstrate **production-grade AI agent engineering skills:**
+Built to practice and demonstrate AI-agent engineering concepts:
 
 1. **Multi-agent orchestration** — Real delegation patterns, not just prompts
-2. **Production architecture** — Tests, monitoring, containerization, documentation
-3. **Cost engineering** — Designed from day one to run at zero model cost
+2. **Architecture fundamentals** — Tests, monitoring, containerization, documentation
+3. **Cost awareness** — Designed to support local and free-tier components where available
 4. **Real-world patterns** — Task queues, health checks, eval frameworks, human-in-the-loop
 
 ---
@@ -149,7 +149,7 @@ MIT — Free to adapt and reuse.
 
 ## 👤 Author
 
-**Alex Bogle** — AI Engineer based in Jamaica. Building production-grade AI agent infrastructure. 🔭 Open to Work — seeking Applied AI Engineer, ML Engineer, AI Solutions Engineer roles.
+**Alex Bogle** — IT support and technical operations candidate based in Jamaica. This repository is a personal learning lab and is not presented as production employment experience.
 
 - 🌐 [saintlex.sbs](https://saintlex.sbs/)
 - 💼 [linkedin.com/in/alex-bogle](https://linkedin.com/in/alex-bogle)
